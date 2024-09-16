@@ -1,0 +1,70 @@
+@import "../../../../styles.scss";
+
+.login-info__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-info__user-name {
+  color: #454545;
+  font-size: 15px;
+}
+
+.login-info__img {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: 3px;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    transform: scale(1.06)
+  }
+
+  &:active {
+    transform: scale(1.02)
+  }
+
+}
+
+.login-info__button {
+  font-family: "Roboto";
+  border: none;
+  border-radius: 5px;
+  background-color: #2F80ED;
+  color: #FFFFFF;
+  height: 24px;
+  width: 80px;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #5197f3;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+}
+
+.add-card-button {
+  width: 24px;
+  height: 24px;
+  font-family: "Roboto";
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2F80ED;
+  color: #FFFFFF;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    background-color: #5197f3;
+    transform: scale(1.02);
+  }
+}

@@ -1,0 +1,26 @@
+<div *ngIf="item$ | async as item" class="detailed-info-page" >
+  <a class="detailed-info-page__return" routerLink=""><img src="assets/images/return-button.png"></a>
+  <div class="detailed-info-page__video">
+    <img class="detailed-info-page__img" [src]="item.snippet.thumbnails.maxres.url" alt="">
+    <div class="heart" *ngIf="item" (click)="toggleFavorite()">
+      <span *ngIf="(isFavorite$ | async) === true">&#10084;</span>
+      <span *ngIf="(isFavorite$ | async) === false">&#9825;</span>
+    </div>
+  </div>
+
+  <div class="detailed-info-page__text" [appColorBottomBorder]="item.snippet.publishedAt">
+    <h1 class="detailed-info-page__title">{{item.snippet.title}}</h1>
+    <div class="detailed-info-page__date">{{item.snippet.publishedAt | date: 'fullDate'}}</div>
+    <h2 class="detailed-info-page__subtitle">Description:</h2>
+    <div class="detailed-info-page__description">{{item.snippet.description}}</div>
+    <div class="detailed-info-page__icons">
+        <ul class="detailed-info-page__list">
+          <li class="detailed-info-page__icon"><img src="assets/images/viewed.png" alt="views"> {{item.statistics.viewCount}}</li>
+          <li class="detailed-info-page__icon"><img src="assets/images/like.png" alt="like"> {{item.statistics.likeCount}}</li>
+          <li class="detailed-info-page__icon"><img src="assets/images/dislike.png" alt="dislike"> {{ dislikesNumber }}</li>
+          <li class="detailed-info-page__icon"><img src="assets/images/comments.png" alt="comments"> {{item.statistics.commentCount}}</li>
+        </ul>
+    </div>
+  </div>
+
+</div>

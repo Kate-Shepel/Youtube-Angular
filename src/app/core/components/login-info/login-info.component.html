@@ -1,0 +1,8 @@
+<div class="login-info">
+  <div class="login-info__user">
+    <div class="login-info__user-name">{{user}}</div>
+    <img class="login-info__img" src="../../assets/images/login.png" alt="Login icon">
+    <a routerLink="/auth/admin"><div class="add-card-button" *ngIf="user">+</div></a>
+    <button class="login-info__button" type="submit" *ngIf="user" title="exit" (click)="onLogOut()">Log Out</button>
+  </div>
+</div>

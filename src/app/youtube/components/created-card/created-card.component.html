@@ -1,0 +1,6 @@
+<div class="card-item" [appColorBottomBorder]="createdData.date">
+  <img class="card-item__img" [src]="createdData.img" alt="Card Photo">
+  <p class="card-item__title" >{{createdData.title}}<br> <span class="card__date">({{ createdData.date | date }})</span></p>
+  <p class="card-item__description" >{{createdData.description.length > 75 ?  createdData.description.substring(0, 75) + '...': createdData.description }}<br></p>
+  <p class="card-item__url" >Video: <a href="{{createdData.url}}" target="_blank">click the link!</a></p>
+</div>

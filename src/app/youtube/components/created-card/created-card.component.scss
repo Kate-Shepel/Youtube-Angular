@@ -1,0 +1,50 @@
+.card-item {
+  width: 285px;
+  height: 350px;
+  background-color: #E5E5E5;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  color: #4F4F4F;
+  font-weight: bold;
+  font-size: 17px;
+  transition: all 0.4s ease-out;
+  font-family: 'Roboto';
+  position: relative;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+
+  &__title {
+    text-align: end;
+    font-family: 'Roboto';
+  }
+
+  &__description {
+    text-align: right;
+    font-family: 'Roboto';
+  }
+
+  &__img {
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__url {
+    text-align: right;
+    font-family: 'Roboto';
+  }
+
+  &__date {
+    font-family: 'Roboto';
+    font-size: 10px;
+    font-weight: 400;
+    text-align: right;
+  }
+
+}

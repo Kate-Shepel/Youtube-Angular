@@ -1,0 +1,77 @@
+<div class="msg" *ngIf="cardCreatedMsg"><app-created-card-msg></app-created-card-msg></div>
+<div class="admin">
+  <form nz-form [formGroup]="validateForm" class="admin-form" (ngSubmit)="submitAdminForm()">
+    <h2 class="admin-form-heading">Create new card</h2>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input type="text" nz-input formControlName="title" placeholder="Title" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message" *ngIf="(getControl('title')?.dirty || getControl('title')?.touched) && getControl('title')?.errors?.['required'] ">
+      Please enter a title!
+    </div>
+    <div class="error-message" *ngIf="(getControl('title')?.dirty || getControl('title')?.touched) && getControl('title')?.errors?.['minlength'] ">
+      The title is too short
+    </div>
+    <div class="error-message" *ngIf="(getControl('title')?.dirty || getControl('title')?.touched) && getControl('title')?.errors?.['maxlength'] ">
+      The title is too long
+    </div>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input type="text" nz-input formControlName="description" placeholder="Description" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message"
+      *ngIf="getControl('description')?.errors?.['maxlength'] && (getControl('description')?.dirty || getControl('description')?.touched)">
+      The description is too long
+    </div>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input type="text" nz-input formControlName="img" placeholder="Image Link" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message" *ngIf="getControl('img')?.errors?.['required'] && (getControl('img')?.dirty || getControl('img')?.touched)">
+      Please enter a link to the image
+    </div>
+    <div class="error-message" *ngIf="getControl('img')?.errors?.['urlValidity'] && !getControl('img')?.errors?.['required'] && (getControl('img')?.dirty || getControl('img')?.touched)">
+      Please enter a valid link
+    </div>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group>
+          <input type="text" nz-input formControlName="url" placeholder="Video Link" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message" *ngIf="getControl('url')?.errors?.['required'] && (getControl('url')?.dirty || getControl('url')?.touched)">
+      Please enter a link to the video
+    </div>
+    <div class="error-message" *ngIf="getControl('url')?.errors?.['urlValidity'] && !getControl('url')?.errors?.['required'] && (getControl('url')?.dirty || getControl('url')?.touched)">
+      Please enter a valid link
+    </div>
+
+    <nz-form-item>
+      <nz-form-control>
+        <nz-date-picker name="date-picker" formControlName="date"></nz-date-picker>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message" *ngIf="getControl('date')?.errors?.['required'] && (getControl('date')?.dirty || getControl('date')?.touched)">
+      Please enter a creation date
+    </div>
+    <div class="error-message" *ngIf="getControl('date')?.errors?.['dateValidity'] && (getControl('date')?.touched || getControl('date')?.dirty)   ">
+      Please choose a valid date, not from the future
+    </div>
+
+    <button nz-button class="admin-form-button" [nzType]="'primary'">Create card</button>
+    <button nz-button class="admin-form-button" type="button" (click)="resetForm()">Reset</button>
+  </form>
+</div>

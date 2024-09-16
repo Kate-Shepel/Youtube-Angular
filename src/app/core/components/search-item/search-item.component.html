@@ -1,0 +1,19 @@
+<div class="card-item" [appColorBottomBorder]="item?.snippet?.publishedAt">
+  <img class="card-item__img" [src]="item?.snippet?.thumbnails?.medium?.url" alt="Card Photo">
+  <div class="card-item__icons">
+    <ul class="card-item__list">
+      <li class="card-item__el"><img src="/assets/images/viewed.png" alt="Viewed Icon"> {{item?.statistics?.viewCount}}</li>
+      <li class="card-item__el"><img src="/assets/images/like.png" alt="Like Icon"> {{item?.statistics?.likeCount ? item?.statistics?.likeCount : 0}}</li>
+      <li class="card-item__el"><img src="/assets/images/dislike.png" alt="Dislike Icon"> {{ dislikesNumber }}</li>
+      <li class="card-item__el"><img src="/assets/images/comments.png" alt="Comments Icon"> {{item?.statistics?.commentCount ? item?.statistics?.commentCount : 0}}</li>
+    </ul>
+  </div>
+  <p class="card-item__title" *ngIf="item?.snippet?.title as title">
+    {{ title.length > 75 ? title.substring(0, 75) + "..." : title }}
+  </p>
+  <a class="card-item__button" title="{{item?.snippet?.description}}" routerLink="/youtube/detailed" [queryParams]="{id: item?.id}">more...</a>
+  <div class="heart" *ngIf="item" (click)="toggleFavorite()">
+    <span *ngIf="(isFavorite$ | async) === true">&#10084;</span>
+    <span *ngIf="(isFavorite$ | async) === false">&#9825;</span>
+  </div>
+</div>

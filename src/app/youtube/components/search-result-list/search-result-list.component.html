@@ -1,0 +1,5 @@
+<div class="search-results-list">
+  <app-created-card *ngFor="let createdCard of createdCards$ | async" [createdData]="createdCard"></app-created-card>
+  <app-search-item *ngFor="let item of (cardData$ | async) ?? [] | sorting: sortChange" [item]="item" (favoriteToggled)="handleFavoriteToggle($event)"></app-search-item>
+</div>
+

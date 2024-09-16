@@ -1,0 +1,15 @@
+<div class="header">
+  <h1></h1>
+  <div class="header__elements">
+    <a routerLink="/"><div class="header__logo">
+      <img src="../../assets/images/logo.svg" alt="Youtube Logo">
+    </div></a>
+    <app-search-input (isSearch)="handleSearch($event)"></app-search-input>
+    <div class="settings__button" (click)="displaySorting = !displaySorting; change(displaySorting)">
+      <img class="settings__img" src="../../assets/images/settings-button1.svg" alt="settings-button">
+    </div>
+  </div>
+  <app-login-info></app-login-info>
+</div>
+
+

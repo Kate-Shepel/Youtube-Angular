@@ -1,0 +1,5 @@
+<div class="main" #main>
+  <app-header (changed)="toggleSorting($event)"></app-header>
+  <app-sorting-options *ngIf="displaySorting$ | async"></app-sorting-options>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,44 @@
+.search-input {
+  display: flex;
+  &__field {
+    font-family: "Roboto";
+    border: none;
+    background-color: #fffefe;
+    padding: 10px;
+    outline: none;
+    height: 24px;
+    width: 396px;
+    &::placeholder {
+      font-family: "Roboto";
+      color: #929292;
+    }
+    &:focus {
+      border-bottom: 1px solid #7baceb;
+    }
+  }
+
+  &__button {
+    font-family: "Roboto";
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #2F80ED;
+    color: #FFFFFF;
+    // padding: 5px;
+    height: 24px;
+    width: 80px;
+    transition: all 0.4s ease-out;
+    &:hover {
+      cursor: pointer;
+      background-color: #5197f3;
+      transform: scale(1.02);
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}

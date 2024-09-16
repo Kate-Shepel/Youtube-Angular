@@ -1,0 +1,129 @@
+.detailed-info-page {
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  color: #cccccc;
+  max-height: 55vh;
+  font-family: 'Roboto';
+  color: #828282;
+  position: relative;
+
+  &__video {
+    border: 1px solid #606060;
+    border-right: none;
+    background-color: black;
+    align-items: center;
+    width: 60%;
+    display: flex;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    background-size: cover;
+    height: auto;
+  }
+
+  &__text {
+    padding: 30px 27px 20px 27px;
+    background-color: #E5E5E5;
+    color: #cccccc;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 36%;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__date {
+    margin-bottom: 0.6rem;
+    font-size: 12px;
+    color: #828282;
+  }
+
+  &__title {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  &__subtitle {
+    color: #000000;
+    margin-bottom: 0.4rem;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin-bottom: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    color: #828282;
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &__list {
+    max-width: 220px;
+    display: flex;
+    gap: 5px;
+    margin: 10px auto 0 auto;
+    justify-content: space-around;
+    color: #000000;
+    font-size: 11px;
+  }
+
+  &__icons {
+    margin-top: auto;
+  }
+  &__icon {
+    list-style: none;
+  }
+
+  &__return {
+    transition: all 0.2s ease-out;
+    width: 45px;
+    height: 45px;
+    left: 7px;
+    top: -2px;
+    position: relative;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+}
+
+.detailed-info-page__description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: #b9b3b3;
+}
+
+.detailed-info-page__description::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: rgb(56, 56, 56);
+}
+
+.detailed-info-page__description::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(56, 56, 56);
+}
+
+.heart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: red;
+  font-size: 30px;
+  font-weight: 200;
+}

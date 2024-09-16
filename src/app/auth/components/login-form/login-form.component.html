@@ -1,0 +1,64 @@
+<div class="login">
+  <h2 class="form-heading">Login</h2>
+  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitLoginForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="user">
+          <input type="text" nz-input formControlName="user" placeholder="User email">
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-message"
+      *ngIf="((validateForm.controls['user'].touched || validateForm.controls['user'].dirty) && userEmail?.errors?.['email'])">
+      The login email is invalid
+    </div>
+    <div class="error-message"
+      *ngIf="((validateForm.controls['user'].touched || validateForm.controls['user'].dirty) && userEmail?.errors?.['required'])">
+      Please enter a login email
+    </div>
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzPrefixIcon="lock">
+          <input type="password" nz-input formControlName="password" placeholder="Password" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div class="error-password-message"
+    *ngIf="(userPassword?.touched || userPassword?.dirty) && userPassword?.errors?.['required']">
+      Please enter a password
+    </div>
+    <div class="error-password-message"
+    *ngIf="(userPassword?.touched || userPassword?.dirty) && userPassword?.errors?.['minlength']">
+      Your password isn't strong enough, should be at least 8 chars
+    </div>
+    <div class="error-password-message"
+    *ngIf="userPassword?.hasError('uppercaseRequired')">
+      {{ userPassword?.getError('uppercaseRequired') }}
+    </div>
+    <div class="error-password-message"
+    *ngIf="userPassword?.hasError('lowercaseRequired')">
+      {{ userPassword?.getError('lowercaseRequired') }}
+    </div>
+    <div class="error-password-message"
+    *ngIf="userPassword?.hasError('numericRequired')">
+      {{ userPassword?.getError('numericRequired') }}
+    </div>
+    <div class="error-password-message"
+    *ngIf="userPassword?.hasError('specialCharRequired')">
+      {{ userPassword?.getError('specialCharRequired') }}
+    </div>
+    <div nz-row class="login-form-margin">
+      <div nz-col [nzSpan]="12">
+        <label nz-checkbox formControlName="remember">
+          <span>Remember me</span>
+        </label>
+      </div>
+      <div nz-col [nzSpan]="12">
+        <a class="login-form-forgot">Forgot password</a>
+      </div>
+    </div>
+    <button nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+    <span>Or</span>
+    <a routerLink="/auth/registration" class="register-link" routerLinkActive="active">Register Now!</a>
+  </form>
+</div>
