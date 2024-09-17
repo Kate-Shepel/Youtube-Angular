@@ -5,13 +5,13 @@ The main features include simulating YouTube's search functionality with real-ti
 
 This application is based on the following tasks:
 
-- [RSScholl task, Intro](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/intro.md)
-- [RSScholl task, Components. Directives & Pipes](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/components-directives-pipes.md)
-- [RSScholl task, Modules, Services, Routing](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/modules-services-routing.md)
-- [RSScholl task, RxJS & Observables. HTTP](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/rxjs-observables-http.md)
-- [RSScholl task, Forms](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/forms.md)
-- [RSScholl task, NgRx](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/NgRX.md)
-- [RSScholl task, Unit testing with Jest](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/unit-testing-jest.md)
+- [RSSchool task, Intro](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/intro.md)
+- [RSSchool task, Components. Directives & Pipes](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/components-directives-pipes.md)
+- [RSSchool task, Modules, Services, Routing](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/modules-services-routing.md)
+- [RSSchool task, RxJS & Observables. HTTP](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/rxjs-observables-http.md)
+- [RSSchool task, Forms](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/forms.md)
+- [RSSchool task, NgRx](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/NgRX.md)
+- [RSSchool task, Unit testing with Jest](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/angular/unit-testing-jest.md)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
