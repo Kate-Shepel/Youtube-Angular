@@ -1,7 +1,7 @@
 # YoutubeClient
 
-The app is designed as a single-page application (SPA) using Angular with a focus on modular architecture and UI interaction. 
-The primary functionalities revolve around simulating YouTube search capabilities with real-time search results, user login with forms and validation and possibility to add new videos.
+The app is a single-page application (SPA) built with Angular, emphasizing modular architecture and user-friendly interactions.
+The main features include simulating YouTube's search functionality with real-time results, search results sorting options, an admin page for adding new video cards, and a user login system with form validation.
 
 This application is based on the following tasks:
 
